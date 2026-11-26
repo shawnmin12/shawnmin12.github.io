@@ -4,15 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="민수환의 포트폴리오 - Java Backend Developer" />
+    <meta name="description" content="민수환의 포트폴리오 - Java 백엔드 · AI 플랫폼 개발자" />
+    <meta name="color-scheme" content="light dark" />
     <title>민수환 | Portfolio</title>
+    <!-- 첫 페인트 전에 테마를 정해 깜빡임 방지 (저장값 → 시스템 설정) -->
+    <script>
+      (function () {
+        var theme = 'light';
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'dark' || saved === 'light') theme = saved;
+          else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+        } catch (e) { /* 저장소를 쓸 수 없는 환경에서는 라이트 */ }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CB_wJziw.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-YaUINmhw.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-DjCHLzuP.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C2XgZ1ch.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
